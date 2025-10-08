@@ -1,59 +1,51 @@
-# Streaksmith
+Streaksmith — Habit Tracker (Angular)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.4.
-
-## Development server
-
-To start a local development server, run:
-
-```bash
+A minimalist habit tracker built with Angular 20, Angular Material, Signals, and IndexedDB (Dexie). Log daily habits, track streaks, and see a 30-day heatmap — works offline.
+Live demo: https://KoBe1628.github.io/streaksmith
+✨ Features
+• Create / edit / archive habits
+• Daily checklist with optional numeric value (reps/minutes)
+• Offline persistence (IndexedDB via Dexie)
+• Analytics: current streak, best streak, 7‑day completion, 30‑day heatmap
+• Export / import JSON backup
+• Clean, responsive UI (Angular Material)
+🖼️ Screenshots
+| Today | Habits | Analytics |
+|------|--------|-----------|
+| ![Today](public/screenshots/today.png) | ![Habits](public/screenshots/habits.png) | ![Analytics](public/screenshots/analytics.png) |
+🛠 Tech
+Angular 20 (standalone + Signals) · Angular Material · Dexie (IndexedDB) · date‑fns
+🚀 Local development
+npm install
 ng serve
-```
+# http://localhost:4200
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+📦 Build
+ng build --configuration production
+☁️ Deploy (GitHub Pages)
+This repo includes a GitHub Actions workflow that:
+1) Builds with `--base-href /streaksmith/`
+2) Copies `index.html` → `404.html` for SPA routing
+3) Publishes to GitHub Pages
 
-## Code scaffolding
+See `.github/workflows/deploy.yml`.
+🗺 Folder highlights
+src/app/
+  core/
+    models/            # Types
+    db/dexie-db.ts     # IndexedDB (SSR-safe)
+    store/habit.store.ts
+  features/
+    today/             # Checklist + numeric value
+    habits/            # List, add/edit, archive, filter
+    analytics/         # KPIs + 30-day heatmap
+    settings/          # Export/import JSON
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+🗓 Roadmap
+• Custom frequency (days of week)
+• Notifications
+• Multi-habit charts
+• Dark mode
+👤 Author
+Built by Kodirov Bekhzod. Open to Angular internship / working student roles.
+[REMOVE BEFORE COMMIT] Replace <YOUR NAME> and ensure the live link uses your GitHub username.
