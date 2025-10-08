@@ -19,18 +19,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
+
       - run: npm ci
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
       - name: Build Angular (Pages base-href)
         run: |
           npx ng build --configuration production --base-href /streaksmith/
           if [ -d "dist/streaksmith/browser" ]; then OUT=dist/streaksmith/browser; else OUT=dist/streaksmith; fi
-          cp "$OUT/index.html" "$OUT/404.html"  # SPA fallback
+          # SPA fallback so /today etc. work on refresh
+          cp "$OUT/index.html" "$OUT/404.html"
           echo "OUT_DIR=$OUT" >> $GITHUB_ENV
-      - uses: actions/upload-pages-artifact@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ${{ env.OUT_DIR }}
 
