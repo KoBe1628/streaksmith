@@ -9,6 +9,19 @@ Live demo: https://KoBe1628.github.io/streaksmith
 • Analytics: current streak, best streak, 7‑day completion, 30‑day heatmap
 • Export / import JSON backup
 • Clean, responsive UI (Angular Material)
+
+---
+
+## 👀 Try the demo data
+
+You can explore Streaksmith with pre-filled habits and recent history:
+
+1. Open the app → **Settings**.
+2. Click **Seed demo data** → then visit **Today** and **Analytics**.
+3. To reset, click **Clear all data** (also in Settings).
+
+> Data is stored **locally** in your browser (IndexedDB). Export/Import JSON is available for backups.
+
 🖼️ Screenshots
 | Today | Habits | Analytics |
 |------|--------|-----------|
