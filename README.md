@@ -10,6 +10,11 @@ Live demo: https://KoBe1628.github.io/streaksmith
 • Export / import JSON backup
 • Clean, responsive UI (Angular Material)
 
+🖼️ Screenshots
+| Today | Habits | Analytics |
+|------|--------|-----------|
+| ![Today](public/screenshots/today.png) | ![Habits](public/screenshots/habits.png) | ![Analytics](public/screenshots/analytics.png) |
+
 ---
 
 ## 👀 Try the demo data
@@ -21,11 +26,6 @@ You can explore Streaksmith with pre-filled habits and recent history:
 3. To reset, click **Clear all data** (also in Settings).
 
 > Data is stored **locally** in your browser (IndexedDB). Export/Import JSON is available for backups.
-
-🖼️ Screenshots
-| Today | Habits | Analytics |
-|------|--------|-----------|
-| ![Today](public/screenshots/today.png) | ![Habits](public/screenshots/habits.png) | ![Analytics](public/screenshots/analytics.png) |
 
 🛠 Tech
 Angular 20 (standalone + Signals) · Angular Material · Dexie (IndexedDB) · date‑fns
