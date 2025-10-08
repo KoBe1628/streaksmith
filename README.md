@@ -13,6 +13,7 @@ Live demo: https://KoBe1628.github.io/streaksmith
 | Today | Habits | Analytics |
 |------|--------|-----------|
 | ![Today](public/screenshots/today.png) | ![Habits](public/screenshots/habits.png) | ![Analytics](public/screenshots/analytics.png) |
+
 🛠 Tech
 Angular 20 (standalone + Signals) · Angular Material · Dexie (IndexedDB) · date‑fns
 🚀 Local development
